@@ -806,7 +806,7 @@ if "last_result" in st.session_state:
 
         st.metric(
             "Visual Risk Score",
-            f"{result['risk_score']}/100"
+            f"{result.get('risk_score', 0)}/100"
         )
 
     with col2:
